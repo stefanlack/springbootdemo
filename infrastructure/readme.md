@@ -59,7 +59,7 @@ Analyse-Ergebnisse sind unter http://localhost:9000/dashboard?id=com.opitzconsul
 
 ## Installation mit Docker
 
-Entommen von der Anleitung auf https://www.jenkins.io/doc/book/installing/docker/
+Entnommen von der Anleitung auf https://www.jenkins.io/doc/book/installing/docker/
 
 
 ```bash
