@@ -1,4 +1,4 @@
-package com.opitzconsulting.springbootdemo.aufgaben.db;
+package com.opitzconsulting.springbootdemo.common.db;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
@@ -22,12 +22,12 @@ import java.time.OffsetDateTime;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
 public class AbstractBaseEntity {
 
-    @Column(name = "CREATED_AT")
+    @Column
     @CreatedDate
     @EqualsAndHashCode.Include
     protected OffsetDateTime createdAt;
 
-    @Column(name = "UPDATED_AT")
+    @Column
     @LastModifiedDate
     @EqualsAndHashCode.Include
     protected OffsetDateTime updatedAt;

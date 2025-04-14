@@ -13,8 +13,16 @@
 
 ## Build
 
-Build-System ist Maven
+Das Projekt wird mit Maven gebaut. 
+Die Tests werden mit JUnit 5 durchgeführt. 
 
+## Local Deployment
+
+
+[Swagger-UI
+](http://localhost:8080/swagger-ui/index.html) ist unter dem Pfad `/swagger-ui/index.html` erreichbar.
+
+Die OPEN-API-Spezifikation kann unter dem Pfad [/v3/api-docs](http://localhost:8080/v3/api-docs) geladen werden.
 # Architektur
 
 ## ADR-Liste

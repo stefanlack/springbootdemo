@@ -18,10 +18,10 @@
 
             <!-- Hinweis für demo: Bezeichnung auf Englisch, da "technisches Feld"
             so eine Konvention muss im Projekt abgestimmt und dokumentiert werden -->
-            <column name="createdAt" type="timestamp with time zone">
+            <column name="created_at" type="timestamp with time zone">
                 <constraints nullable="false"/>
             </column>
-            <column name="updatedAt" type="timestamp with time zone">
+            <column name="updated_at" type="timestamp with time zone">
                 <constraints nullable="false"/>
             </column>
         </createTable>

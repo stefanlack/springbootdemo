@@ -1,16 +1,18 @@
-package com.opitzconsulting.springbootdemo.aufgaben.db;
+package com.opitzconsulting.springbootdemo.aufgaben.domain;
 
 
+import com.opitzconsulting.springbootdemo.common.db.AbstractBaseEntity;
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table
 @Setter
 @Getter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = true)
+@Builder(setterPrefix = "with")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Aufgabe extends AbstractBaseEntity {
 
     @Id

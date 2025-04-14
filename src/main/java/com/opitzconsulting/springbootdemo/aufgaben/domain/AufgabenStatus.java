@@ -1,4 +1,4 @@
-package com.opitzconsulting.springbootdemo.aufgaben.db;
+package com.opitzconsulting.springbootdemo.aufgaben.domain;
 
 public enum AufgabenStatus {
     NEU,
