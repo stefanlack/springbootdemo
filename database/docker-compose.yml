@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: springboot-demo
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      POSTGRES_USER: springbootdemo_owner
+      POSTGRES_PASSWORD: geheim
+      POSTGRES_DB: springbootdemo
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:

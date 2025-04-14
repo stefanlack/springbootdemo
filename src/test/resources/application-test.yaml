@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgresql.springbootdemo-test.svc:5432/sprinbootdemo-db
+    driver-class-name: org.postgresql.Driver
+    username: testuser
+    password: testusersecret
+  liquibase:
+
+    change-log: classpath:/db-changelog-test.xml
+    enabled: true
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql

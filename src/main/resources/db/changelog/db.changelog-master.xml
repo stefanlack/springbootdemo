@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-table-aufgabe" author="Stefan Lack">
+        <createTable tableName="aufgabe">
+            <column name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_aufgabe"/>
+            </column>
+            <column name="titel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="false"
+                             checkConstraint="status in ('NEU','IN_BEARBEITUNG','ABGESCHLOSSEN','ZURUECKGESTELLT','VERWORFEN')"/>
+            </column>
+
+            <!-- Hinweis für demo: Bezeichnung auf Englisch, da "technisches Feld"
+            so eine Konvention muss im Projekt abgestimmt und dokumentiert werden -->
+            <column name="createdAt" type="timestamp with time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updatedAt" type="timestamp with time zone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createSequence sequenceName="aufgabe_sequence"/>
+    </changeSet>
+
+</databaseChangeLog>
