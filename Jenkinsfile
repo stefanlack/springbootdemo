@@ -19,17 +19,29 @@ pipeline {
 				sh './mvnw -Dmaven.test.failure.ignore=true clean package'
             }
         }
+
+         stage('sonar') {
+		   agent { docker 'maven:3.9.9-eclipse-temurin-21' }
+            steps {
+				echo "execute  './mvnw clean verify sonar:sonar' ..."
+//                 Auskommentiert, da jenkins noch nicht localse sonar installation erreichen wird. (nicht mehr getestet)
+//                 withCredentials([string(credentialsId: 'sonarCredentials', variable: 'SONAR_TOKEN')]) {
+//                         sh './mvnw clean verify sonar:sonar -Dsonar.token=${SONAR_TOKEN}'
+//                 }
+            }
+         }
 	}
-	post {
-		always {
-			archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-		}
-		success {
-			echo 'Build was successful!'
-		}
-		failure {
-			echo 'Build failed!'
-		}
-	}
+
+	//post {
+	//	always {
+	//		archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+	//	}
+	//	success {
+	//		echo 'Build was successful!'
+	//	}
+	//	failure {
+	//		echo 'Build failed!'
+	//	}
+	//}
 
 }
