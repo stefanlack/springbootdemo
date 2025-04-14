@@ -100,3 +100,5 @@ password: geheim
 Im Jenkins unter "Jenkins verwalten" -> "Tools" 
 - Git: JGit installieren
 - JDK: url https://download.java.net/java/GA/jdk21/fd2272bbf8e04c3dbaee13770090416c/35/GPL/openjdk-21_linux-x64_bin.tar.gz eintragn
+- 
+  https://download.java.net/java/GA/jdk24/1f9ff9062db4449d8ca828c504ffae90/36/GPL/openjdk-24_linux-x64_bin.tar.gz
