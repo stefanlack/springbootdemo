@@ -57,3 +57,10 @@ Die Verwendung von Spring Web war durch die Rahmenbedingungen vorgegeben.
 
 ### 007 - Database First Ansatz und Verwendung von Liquibase
 Der Database First Ansatz wurde gewählt, da die Datenbank mittels automatisierter Schema migration mittels Liquibase verwaltet wird.
+
+
+# Jenkins
+Anleitung zur Installation von Sonarqube und Jenkins wurde in der Datei [infrastructure/readme.md](./../infrastructure/readme.md) hinterlegt.
+
+Für die Beschreibung des Jenkins-Jobs war heute keine Zeit mehr.
+Basis Pipline-File ist in [Jenkinsfile](../Jenkinsfile) abgelegt.
