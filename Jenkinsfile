@@ -7,6 +7,14 @@ pipeline {
     }
 
     stages {
+        stage('Example Build mit docker agent') {
+                agent { docker 'maven:3.9.9-eclipse-temurin-21' }
+                steps {
+                    echo 'Hello, Maven'
+                    sh './mvnw -Dmaven.test.failure.ignore=true clean package'
+                }
+            }
+
         stage('Which Java?') {
                 steps {
                     sh 'java --version'
