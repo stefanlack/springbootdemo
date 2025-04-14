@@ -7,6 +7,11 @@ pipeline {
     }
 
     stages {
+        stage('Which Java?') {
+                steps {
+                    sh 'java --version'
+                }
+            }
         stage('Build') {
             steps {
 //                 // Get some code from a GitHub repository
