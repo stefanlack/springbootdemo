@@ -95,3 +95,8 @@ Dummy User konfigurieren
 username: stefanlack
 password: geheim
 (hier öffentlich sichtbar eingetragen, da es sich nur um ein lokales Demo Projekt handelt)
+
+
+Im Jenkins unter "Jenkins verwalten" -> "Tools" 
+- Git: JGit installieren
+- JDK: url https://download.java.net/java/GA/jdk21/fd2272bbf8e04c3dbaee13770090416c/35/GPL/openjdk-21_linux-x64_bin.tar.gz eintragn
